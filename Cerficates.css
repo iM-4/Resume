@@ -111,36 +111,46 @@ header {
 
 /* تحسين تجربة الجوال */
 @media (max-width: 767px) {
+    /* جعل القائمة عمودية */
+    nav ul {
+        display: grid; /* جعل العناصر عمودية */
+        justify-content: center; /* توسيط العناصر */
+        gap: 10px; /* زيادة المسافة بين العناصر */
+    }
+
     nav ul li {
-        display: block; /* جعل العناصر عمودية */
-        margin: 10px 0; /* زيادة المسافة بين العناصر */
+        margin: 0; /* إزالة المسافة الجانبية */
     }
 
     nav ul li a {
         font-size: 16px; /* تقليل حجم الخط */
     }
+
+    /* تعديلات الشهادات للجوال */
     .certificates {
         flex-direction: column;
     }
 
     .certificate {
-        width: 90%; /* زيادة العرض على الجوال */
+        width: 80%; /* زيادة العرض على الجوال */
         align-self: center;
         margin-left: 0;
         margin-right: 0;
     }
-
-    .curved-path {
-        display: none; /* إخفاء المسار المنحني على الجوال */
-    }
 }
+
 @media (max-width: 576px) {
-    .certificate {
-        width: 90%;
-        padding: 8px;
+    /* تعديلات إضافية للشاشات الصغيرة جدًا */
+    nav ul {
+        gap: 8px; /* تقليل المسافة بين العناصر */
     }
 
-    .curved-path {
-        display: none;
+    nav ul li a {
+        font-size: 14px; /* تقليل حجم الخط أكثر */
+    }
+
+    .certificate {
+        width: 80%; /* زيادة العرض أكثر */
+        padding: 15px; /* تقليل الحشوة */
     }
 }
