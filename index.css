@@ -5,11 +5,12 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
 }
+
+/* تنسيق القائمة */
 nav {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 10px 0;
     text-align: center;
-    
     top: 0;
     z-index: 1000;
 }
@@ -75,7 +76,7 @@ header video:active {
 }
 
 /* تنسيق about */
-#about, #skill,#acadSkill {
+#about, #skill, #acadSkill {
     background-color: white;
     color: black;
     padding: 20px;
@@ -137,6 +138,7 @@ header video:active {
     width: 30px; /* حجم الصور */
     height: 30px;
 }
+
 /* Academic Skills Container */
 .academic-container {
     display: flex;
@@ -166,45 +168,67 @@ header video:active {
     background-color: #333;
 }
 
-@media (max-width: 768px) {
+/* تحسين تجربة الجوال */
+@media (max-width: 767px) {
+    /* جعل القائمة عمودية */
+    nav ul {
+        display: grid; /* جعل العناصر عمودية */
+        justify-content: center; /* توسيط العناصر */
+        gap: 10px; /* زيادة المسافة بين العناصر */
+    }
+
     nav ul li {
-        display: block; /* جعل العناصر عمودية */
-        margin: 10px 0; /* زيادة المسافة بين العناصر */
+        margin: 0; /* إزالة المسافة الجانبية */
     }
 
     nav ul li a {
         font-size: 16px; /* تقليل حجم الخط */
     }
-    header {
-        height: 200px; /* تقليل ارتفاع الهيدر على الجوال */
-    }
 
-    header video {
-        height: 200px; /* ضبط ارتفاع الفيديو على الجوال */
+    /* تعديلات الهيدر */
+    header {
+        height: 200px; /* تقليل ارتفاع الهيدر */
     }
 
     .header-content {
-        padding: 10px; /* تقليل الحشوة على الجوال */
+        padding: 10px; /* تقليل الحشوة */
         margin-top: 10px; /* تقليل المسافة من الأعلى */
     }
-}
-@media (max-width: 576px) {
-    header {
-        height: 150px;
-    }
 
-    .header-content {
-        padding: 8px;
-        margin-top: 8px;
-    }
-
+    /* تعديلات الأقسام */
     #about, #skill, #acadSkill {
-        max-width: 100%;
-        margin: 15px auto;
+        max-width: 80%; /* زيادة العرض */
+        margin: 20px auto; /* تقليل الهوامش */
     }
 
     .academic-item {
-        width: 100px;
-        padding: 5px 10px;
+        width: 150px; /* تقليل عرض العناصر */
+    }
+}
+
+@media (max-width: 576px) {
+    nav ul {
+        gap: 8px; /* تقليل المسافة بين العناصر */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* تقليل حجم الخط أكثر */
+    }
+
+    header {
+        height: 150px; /* تقليل ارتفاع الهيدر أكثر */
+    }
+
+    .header-content {
+        padding: 8px; /* تقليل الحشوة أكثر */
+    }
+
+    #about, #skill, #acadSkill {
+        max-width: 100%; /* زيادة العرض أكثر */
+        margin: 15px auto; /* تقليل الهوامش أكثر */
+    }
+
+    .academic-item {
+        width: 120px; /* تقليل عرض العناصر أكثر */
     }
 }

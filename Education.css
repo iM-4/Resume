@@ -65,8 +65,6 @@ header video {
     transition: opacity 0.3s ease;
 }
 
-
-
 /* تنسيق النص داخل الهيدر */
 .header-content {
     position: relative;
@@ -78,7 +76,6 @@ header video {
     color: white;
     transition: transform 0.3s ease;
 }
-
 
 /* تنسيق قسم البكالوريوس في الأمن السيبراني */
 #bacCyber {
@@ -106,45 +103,59 @@ header video {
 }
 
 /* تحسين تجربة الجوال */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+    /* جعل القائمة عمودية */
+    nav ul {
+        display: grid; /* جعل العناصر عمودية */
+        justify-content: center; /* توسيط العناصر */
+        gap: 10px; /* زيادة المسافة بين العناصر */
+    }
+
     nav ul li {
-        display: block; /* جعل العناصر عمودية */
-        margin: 10px 0; /* زيادة المسافة بين العناصر */
+        margin: 0; /* إزالة المسافة الجانبية */
     }
 
     nav ul li a {
         font-size: 16px; /* تقليل حجم الخط */
     }
+
+    /* تعديلات الهيدر */
     header {
-        height: 120px; /* تقليل ارتفاع الهيدر على الجوال */
+        height: 120px; /* تقليل ارتفاع الهيدر */
     }
 
     .header-content {
-        font-size: 18px; /* تقليل حجم النص على الجوال */
+        font-size: 18px; /* تقليل حجم النص */
         padding: 10px; /* تقليل الحشوة */
     }
 
+    /* تعديلات قسم البكالوريوس */
     #bacCyber {
-        background-size: 150px auto; /* تقليل حجم الصورة الخلفية على الجوال */
+        background-size: 150px auto; /* تقليل حجم الصورة الخلفية */
         background-position: right 10px top 10px; /* تعديل موقع الصورة */
         padding: 15px; /* تقليل الحشوة */
     }
-
-    nav ul li {
-        margin: 10px 0; /* زيادة المسافة بين العناصر على الجوال */
-    }
 }
+
 @media (max-width: 576px) {
+    nav ul {
+        gap: 8px; /* تقليل المسافة بين العناصر */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* تقليل حجم الخط أكثر */
+    }
+
     header {
-        height: 100px;
+        height: 100px; /* تقليل ارتفاع الهيدر أكثر */
     }
 
     .header-content {
-        padding: 8px;
+        padding: 8px; /* تقليل الحشوة أكثر */
     }
 
     #bacCyber {
-        max-width: 100%;
-        margin: 15px auto;
+        max-width: 85%; /* زيادة العرض أكثر */
+        margin: 15px auto; /* تقليل الهوامش أكثر */
     }
 }

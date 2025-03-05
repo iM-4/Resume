@@ -14,7 +14,6 @@ nav {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 10px 0;
     text-align: center;
-    position: sticky;
     top: 0;
     z-index: 1000;
 }
@@ -119,62 +118,45 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* جعل القائمة عمودية */
+    nav ul {
+        display: grid; /* جعل العناصر عمودية */
+        justify-content: center; /* توسيط العناصر */
+        gap: 10px; /* زيادة المسافة بين العناصر */
+    }
+
     nav ul li {
-        display: block; /* جعل العناصر عمودية */
-        margin: 10px 0; /* زيادة المسافة بين العناصر */
+        margin: 0; /* إزالة المسافة الجانبية */
     }
 
     nav ul li a {
         font-size: 16px; /* تقليل حجم الخط */
     }
-    section {
-        max-width: 95%;
-        margin: 30px auto;
+
+    /* تعديلات النموذج ومعلومات التواصل */
+    .contact-container {
+        flex-direction: column; /* جعل العناصر عمودية */
+        gap: 20px; /* زيادة المسافة بين العناصر */
+    }
+
+    .contact-form, .contact-info {
+        width: 100%; /* جعل العناصر تأخذ العرض الكامل */
     }
 }
-/* Extend global styles */
-#contact {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-.contact-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
+@media (max-width: 576px) {
+    nav ul {
+        gap: 8px; /* تقليل المسافة بين العناصر */
+    }
 
-.contact-form, .contact-info {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
-}
+    nav ul li a {
+        font-size: 14px; /* تقليل حجم الخط أكثر */
+    }
 
-.contact-form h2, .contact-info h2 {
-    margin-top: 0;
-    font-size: 1.8em;
-    color: #007BFF;
-}
-
-.social-media ul {
-    list-style: none;
-    padding: 0;
-}
-
-.social-media ul li {
-    margin-bottom: 10px;
-}
-
-.social-media ul li a {
-    text-decoration: none;
-    color: #007BFF;
-    display: flex;
-    align-items: center;
-}
-
-.social-media ul li a img {
-    margin-right: 10px;
+    .contact-form, .contact-info {
+        padding: 15px; /* تقليل الحشوة */
+    }
+  .social-media li{
+    height: 35px;
+  }
 }

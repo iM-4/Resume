@@ -7,6 +7,7 @@ body {
     color: #fff;
 }
 
+/* تنسيق القائمة */
 nav {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 10px 0;
@@ -39,6 +40,7 @@ nav ul li a:hover {
     color: #ffcc00; /* تغيير اللون عند التمرير */
     transform: scale(1.1); /* تكبير النص قليلاً */
 }
+
 /* تنسيق الهيدر */
 header {
     text-align: center;
@@ -46,7 +48,9 @@ header {
     background-color: #282c34;
     color: white;
 }
-.ProjectDetails{
+
+/* تنسيق المشاريع */
+.ProjectDetails {
     background-color: white;
     color: black;
     padding: 20px;
@@ -57,24 +61,42 @@ header {
     text-align: left;
     line-height: 1.5;
 }
-@media (max-width: 768px) {
+
+/* تحسين تجربة الجوال */
+@media (max-width: 767px) {
+    /* جعل القائمة عمودية */
+    nav ul {
+        display: grid; /* جعل العناصر عمودية */
+        justify-content: center; /* توسيط العناصر */
+        gap: 10px; /* زيادة المسافة بين العناصر */
+    }
+
     nav ul li {
-        display: block; /* جعل العناصر عمودية */
-        margin: 10px 0; /* زيادة المسافة بين العناصر */
+        margin: 0; /* إزالة المسافة الجانبية */
     }
 
     nav ul li a {
         font-size: 16px; /* تقليل حجم الخط */
     }
+
+    /* تعديلات المشاريع */
     .ProjectDetails {
-        max-width: 95%;
-        margin: 20px auto;
+        max-width: 95%; /* زيادة العرض */
+        margin: 20px auto; /* تقليل الهوامش */
     }
 }
 
 @media (max-width: 576px) {
+    nav ul {
+        gap: 8px; /* تقليل المسافة بين العناصر */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* تقليل حجم الخط أكثر */
+    }
+
     .ProjectDetails {
-        max-width: 100%;
-        margin: 15px auto;
+        max-width: 100%; /* زيادة العرض أكثر */
+        margin: 15px auto; /* تقليل الهوامش أكثر */
     }
 }
