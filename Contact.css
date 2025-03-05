@@ -120,13 +120,13 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     nav ul li {
-        margin: 10px 0;
+        display: block; /* جعل العناصر عمودية */
+        margin: 10px 0; /* زيادة المسافة بين العناصر */
     }
 
-    header {
-        padding: 30px;
+    nav ul li a {
+        font-size: 16px; /* تقليل حجم الخط */
     }
-
     section {
         max-width: 95%;
         margin: 30px auto;

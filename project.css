@@ -58,6 +58,14 @@ header {
     line-height: 1.5;
 }
 @media (max-width: 768px) {
+    nav ul li {
+        display: block; /* جعل العناصر عمودية */
+        margin: 10px 0; /* زيادة المسافة بين العناصر */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* تقليل حجم الخط */
+    }
     .ProjectDetails {
         max-width: 95%;
         margin: 20px auto;

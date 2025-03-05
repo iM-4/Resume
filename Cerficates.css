@@ -111,6 +111,14 @@ header {
 
 /* تحسين تجربة الجوال */
 @media (max-width: 767px) {
+    nav ul li {
+        display: block; /* جعل العناصر عمودية */
+        margin: 10px 0; /* زيادة المسافة بين العناصر */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* تقليل حجم الخط */
+    }
     .certificates {
         flex-direction: column;
     }
